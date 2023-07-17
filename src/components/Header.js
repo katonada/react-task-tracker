@@ -1,5 +1,5 @@
-import { PropTypes } from 'prop-types';
-import Button from './Button';
+import { PropTypes } from "prop-types";
+import Button from "./Button";
 
 function Header({ title }) {
   return (
@@ -13,7 +13,7 @@ function Header({ title }) {
 }
 
 Header.defaultProps = {
-  title: 'Task Tracker',
+  title: "Task Tracker",
 };
 
 Header.propTypes = {
