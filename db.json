@@ -1,21 +1,34 @@
 {
   "tasks": [
     {
-        "id": 1,
-        "text": "Doctor",
-        "day": "05. Feb at 8:00",
-        "reminder": true
-      },
-      {
-        "id": 2,
-        "text": "School meeting",
-        "day": "06. Feb at 14:45",
-        "reminder": true
-      },
-      { "id": 3,
-        "text": "Shopping",
-        "day": "05. Feb at 17:00",
-        "reminder": false
-      }
+      "id": 1,
+      "text": "Doctor",
+      "day": "05. Feb at 8:00",
+      "reminder": false
+    },
+    {
+      "id": 2,
+      "text": "School meeting",
+      "day": "06. Feb at 14:45",
+      "reminder": true
+    },
+    {
+      "text": "School",
+      "day": "Tommorow",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "Dinner",
+      "day": "at 20h",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Cat to the Vet",
+      "day": "next weel",
+      "reminder": false,
+      "id": 5
+    }
   ]
 }
