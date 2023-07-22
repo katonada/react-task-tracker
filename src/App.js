@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
-import { BrowserRouter as Router, Route } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import About from "./components/About";
+import TaskDetails from "./components/TaskDetails";
 
 function App() {
 
@@ -87,18 +88,28 @@ function App() {
           showAdd={showAddTask}
         />
 
-        {showAddTask && <AddTask onAdd={addTask}/>}
+        <Routes>
+          <Route path ="/" element={
+            <>
+            {showAddTask && <AddTask onAdd={addTask}/>}
 
-        {tasks.length > 0
-          ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
-          : 'No tasks'}
+            {tasks.length > 0
+              ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
+              : 'No tasks'}
+              </>
+          } />
+
+
+          <Route path='/about' element={<About />} />
+          <Route path='/task/:id' element={<TaskDetails />} />
+        </Routes>
 
         <Footer />
 
       </div>
 
     </Router>
-  );
+  )
 }
 
 export default App;
